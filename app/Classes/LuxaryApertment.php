@@ -17,4 +17,9 @@ class LuxaryApertment extends Appartment implements HasAmenities{
     {
         $this->rent = $this->area * 0.5 + $this->numberOfBedrooms * 100;
     }
+
+    public function getAmenities()
+    {
+        return implode(',', $this->amenities);
+    }
 }
