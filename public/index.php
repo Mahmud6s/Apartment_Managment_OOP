@@ -5,16 +5,17 @@ use app\Classes\LuxuryApartment;
 use app\Classes\Owner;
 use app\Classes\StandardApartment;
 
-// Instantiate apartment objects
+// Create a StandardApartment instance
 $standardApartment = new StandardApartment("501", 1800, 2);
-$luxuryApartment   = new LuxuryApartment("502", 3000, 3, ["Swimming Pool", "Gym", "Parking"]);
-
-// Set balcony for a standard apartment
 $standardApartment->setBalcony(true);
-
 $standardApartment->calculateRent();
 
-// Instantiate owner objects
+// Create a LuxuryApartment instance
+$amenities = ['Swimming pool', 'Gym', 'Spa','pool'];
+$luxuryApartment = new LuxuryApartment('B202', 1200, 3, $amenities);
+
+
+// Create Instantiate owner objects
 $owner1 = new Owner("Salman Khan", $standardApartment);
 $owner2 = new Owner("Shah Rukh Khan", $luxuryApartment);
 

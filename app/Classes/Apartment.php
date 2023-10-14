@@ -18,8 +18,10 @@ abstract class Apartment
         $this->calculateRent();
     }
 
+     // Abstract method to calculate the rent (to be implemented in subclasses)
     abstract public function calculateRent();
 
+     // Method to display apartment details
     public function displayApartmentDetails()
     {
         echo "Apartment Number: " . $this->apartmentNumber . "<br>";
@@ -28,6 +30,7 @@ abstract class Apartment
         echo "Monthly Rent: $" . $this->rent . "<br>";
     }
 
+     // Method to get the apartment number
     public function getApartmentNumber()
     {
         return $this->apartmentNumber;

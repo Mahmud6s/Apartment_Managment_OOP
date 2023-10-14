@@ -5,8 +5,8 @@ namespace app\Classes;
 // Class representing a Tenant
 class Owner
 {
-    private $name;
-    private $apartment;
+    private $name;        // Property to store the owner's name
+    private $apartment;   // Property to store the associated apartment
 
     public function __construct($name, Apartment $apartment)
     {
@@ -14,9 +14,11 @@ class Owner
         $this->apartment = $apartment;
     }
 
+
+    //display Owner Details
     public function displayOwnerDetails()
     {
-        echo "Owner Name: " . $this->name . "\n";
-        echo "Apartment Number: " . $this->apartment->getApartmentNumber() . "\n";
+        echo "Owner Name: " . $this->name . "<br>";
+        echo "Apartment Number: " . $this->apartment->getApartmentNumber() . "<br>";
     }
 }

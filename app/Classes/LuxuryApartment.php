@@ -8,7 +8,7 @@ use app\Interfaces\HasAmenities;
 // Class representing a Luxury Apartment
 class LuxuryApartment extends Apartment implements HasAmenities
 {
-    private $amenities;
+    private $amenities = [];  // Property to store amenities
 
     public function __construct($apartmentNumber, $area, $numberOfBedrooms, $amenities)
     {
@@ -18,7 +18,7 @@ class LuxuryApartment extends Apartment implements HasAmenities
 
     public function calculateRent()
     {
-        $this->rent = $this->area * 0.5 + $this->numberOfBedrooms * 150;
+        $this->rent = $this->area * 0.5 + $this->numberOfBedrooms * 150;   // Calculate rent differently for luxury apartments
     }
 
     public function getAmenities()
