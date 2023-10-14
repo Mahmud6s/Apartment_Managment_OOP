@@ -23,9 +23,9 @@ echo "Standard Apartment Details:" . "<br>";
 $standardApartment->displayApartmentDetails();
 
 
-echo "<br>" . "<br>" . "Luxury Apartment Details: " . "<br>";
+echo  "<br>" . "Luxury Apartment Details: " . "<br>";
 $luxuryApartment->displayApartmentDetails();
-echo "<br>" . "Amenities: " . $luxuryApartment->getAmenities() . "<br>";
+echo "Amenities: " . $luxuryApartment->getAmenities() . "<br>";
 
 // Display owner details
 echo "<br>" . "Owner Details: " . "<br>";

@@ -22,10 +22,10 @@ abstract class Apartment
 
     public function displayApartmentDetails()
     {
-        echo "Apartment Number: " . $this->apartmentNumber . "\n";
-        echo "Area (sq. ft.): " . $this->area . "\n";
-        echo "Number of Bedrooms: " . $this->numberOfBedrooms . "\n";
-        echo "Monthly Rent: $" . $this->rent . "\n";
+        echo "Apartment Number: " . $this->apartmentNumber . "<br>";
+        echo "Area (sq. ft.): " . $this->area . "<br>";
+        echo "Number of Bedrooms: " . $this->numberOfBedrooms . "<br>";
+        echo "Monthly Rent: $" . $this->rent . "<br>";
     }
 
     public function getApartmentNumber()
