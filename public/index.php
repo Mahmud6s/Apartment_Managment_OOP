@@ -1,32 +1,34 @@
 <?php
+include 'autoloader.php';
 
+use app\Classes\LuxuryApartment;
 use app\Classes\Owner;
-use app\Classes\LuxaryApertment;
-use app\Classes\StandardApertment;
+use app\Classes\StandardApartment;
 
-include "autoloader.php";
+// Instantiate apartment objects
+$standardApartment = new StandardApartment("501", 1800, 2);
+$luxuryApartment   = new LuxuryApartment("502", 3000, 3, ["Swimming Pool", "Gym", "Parking"]);
 
+// Set balcony for a standard apartment
+$standardApartment->setBalcony(true);
 
-$standerdApartment = new StandardApertment("501", 1800, 2);
-$luxaryApartment = new LuxaryApertment("501", 3000, 3, ["Swimming", "Gym", "Parking"]);
+$standardApartment->calculateRent();
 
+// Instantiate owner objects
+$owner1 = new Owner("Salman Khan", $standardApartment);
+$owner2 = new Owner("Shah Rukh Khan", $luxuryApartment);
 
-
-
-$standerdApartment->hasBelcony( true );
-$standerdApartment->CalculateRent();
-
-
-
-$owner1 = new Owner("Robin",$standerdApartment);
-$owner2 = new Owner("Sahrukh",$standerdApartment);
-
-
-echo "Standar Apartment Details"."<br>";
-$standerdApartment->displayAppertmentDetails();
+// Display apartment details
+echo "Standard Apartment Details:" . "<br>";
+$standardApartment->displayApartmentDetails();
 
 
-echo "<br>"."luxary Apartment Details"."<br>";
+echo "<br>" . "<br>" . "Luxury Apartment Details: " . "<br>";
+$luxuryApartment->displayApartmentDetails();
+echo "<br>" . "Amenities: " . $luxuryApartment->getAmenities() . "<br>";
 
-
-
+// Display owner details
+echo "<br>" . "Owner Details: " . "<br>";
+$owner1->displayOwnerDetails();
+echo "<br>";
+$owner2->displayOwnerDetails();
